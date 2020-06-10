@@ -1,0 +1,21 @@
+pipeline {
+
+	// Genreal settings
+	options {
+	  timeout(time:1, unit: 'HOURS')
+	}
+	parameters {
+	  choice(name: 'environnement', choices: 'DEV\INT\PREPROD\PROD', description: ' Target environment')
+
+	}
+
+
+
+
+
+
+
+
+
+
+}
