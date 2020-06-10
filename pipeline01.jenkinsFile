@@ -4,10 +4,16 @@ pipeline {
 	options {
 	  timeout(time:1, unit: 'HOURS')
 	}
+
 	//parameters {
 	//  choice(name: 'environnement', choices: 'DEV\INT\PREPROD\PROD', description: ' Target environment')
         //
 	//}
+
+	agent {
+	  any
+	}
+
         stages {
   	  stage('Stage 1') {
       	    steps {
