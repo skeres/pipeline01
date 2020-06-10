@@ -4,15 +4,20 @@ pipeline {
 	options {
 	  timeout(time:1, unit: 'HOURS')
 	}
-	parameters {
-	  choice(name: 'environnement', choices: 'DEV\INT\PREPROD\PROD', description: ' Target environment')
-
-	}
-
-
-
-
-
+	//parameters {
+	//  choice(name: 'environnement', choices: 'DEV\INT\PREPROD\PROD', description: ' Target environment')
+        //
+	//}
+        stages {
+  	  stage('Stage 1') {
+      	    steps {
+              script {
+                echo 'Stage 1'
+              }
+            }
+         }
+       }
+  }
 
 
 
