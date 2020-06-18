@@ -7,7 +7,7 @@
     name={{item}}
   with_items: 
   - curl
-#  become: yes
+  become: yes
 #- name: template file index.html with server name
 #  template:
 #    ###src: /home/deploy/projets/projets_ansible/ansible/roles/role_nginx_server/templates/index.html

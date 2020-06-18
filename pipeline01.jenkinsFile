@@ -25,7 +25,6 @@ pipeline {
 	    steps{
 	      ansiblePlaybook (
 	        colorized: true,
-	        become: true,
 	        playbook: 'ansible/playbook.yml',
 	        inventory: 'ansible/hosts'
               )
