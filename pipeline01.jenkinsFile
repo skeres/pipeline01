@@ -22,12 +22,12 @@ pipeline {
           }
 	  
 	  stage('Ansible') {
-	    ansiblePlaybook {
+	    ansiblePlaybook (
 	      colorized: true,
 	      become: true,
-	      playbook: 'ansible/laybook.yml'
+	      playbook: 'ansible/playbook.yml'
 	      inventory: 'ansible/host.yml'
-            }
+            )
 
           }
        }
