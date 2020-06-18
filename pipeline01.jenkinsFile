@@ -25,7 +25,7 @@ pipeline {
 	    ansiblePlaybook (
 	      colorized: true,
 	      become: true,
-	      playbook: 'ansible/playbook.yml'
+	      playbook: 'ansible/playbook.yml',
 	      inventory: 'ansible/host.yml'
             )
 
