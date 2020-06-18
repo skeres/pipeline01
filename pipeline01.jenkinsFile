@@ -19,7 +19,17 @@ pipeline {
                 echo 'Stage 1'
               }
             }
-         }
+          }
+	  
+	  stage('Ansible') {
+	    ansiblePlaybook {
+	      colorized: true,
+	      become: true,
+	      playbook: 'ansible/laybook.yml'
+	      inventory: 'ansible/host.yml'
+            }
+
+          }
        }
 
 
