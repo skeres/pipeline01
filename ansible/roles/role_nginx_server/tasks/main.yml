@@ -8,12 +8,22 @@
   with_items: 
   - curl
   become: yes
-- name: template file index.html 
-  template:
-    ###src: /home/deploy/projets/projets_ansible/ansible/roles/role_nginx_server/templates/index.html
+#- name: template file index.html 
+#  template:
+#    ###src: /home/deploy/projets/projets_ansible/ansible/roles/role_nginx_server/templates/index.html
+#    src: /var/jenkins_home/workspace/pipeline01/ansible/roles/role_nginx_server/templates/index.html
+#    dest: /usr/share/nginx/html
+#    owner: root
+#    group: root
+#    mode: '0644'
+#  become: yes
+- name: copy with backup
+  copy:
     src: /var/jenkins_home/workspace/pipeline01/ansible/roles/role_nginx_server/templates/index.html
     dest: /usr/share/nginx/html
     owner: root
     group: root
     mode: '0644'
+    backup: yes
   become: yes
+
