@@ -1,6 +1,6 @@
 ---
 # tasks file for role_nginx_server---
-- name: install common packages for all servers
+- name: install common packages
   apt: 
     update_cache=yes
     state=latest
