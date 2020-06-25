@@ -17,7 +17,7 @@
 #  become: yes
 - name: create multiples directories system resources in a loop
   file:
-    path: "usr/src/{{ item }}"
+    path: "/usr/src/{{ item }}"
     owner: root
     group: root
     state: directory
@@ -29,3 +29,17 @@
   #  - ansible_workspace/projectApp/checkout
   with_items: ["ansible_workspace", "ansible_workspace/projectApp", "ansible_workspace/projectApp/checkout"]
   become: yes
+
+
+- name: check for success
+  stat:
+    path: "/usr/src/ansible_workspace/projectApp/checkout"
+  register: result
+  become: yes
+
+
+- name: do something with file if exists
+  command: echo "directories /usr/src/ansible_workspace/projectApp/checkout exist"
+  when: result.stat.exists
+ 
+ 
