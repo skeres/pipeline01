@@ -4,13 +4,13 @@
 - name: checkout repository
   git:
     repo: 'https://github.com/skeres/p1.git'
-    dest: /projectApp/checkout
+    dest: /usr/src/ansible_workspace/projectApp/checkout
     version: develop
 
 - name: copy files with backup
   copy:
     #src: /var/jenkins_home/workspace/projectApp/checkout/index.html
-    src: /usr/src/ansible_workspace
+    src: /usr/src/ansible_workspace/projectApp/checkout
     dest: /usr/share/nginx/html
     owner: root
     group: root
