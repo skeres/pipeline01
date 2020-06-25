@@ -2,7 +2,7 @@
 # tasks to deploy applications
 - name: copy with backup
   copy:
-    src: /var/jenkins_home/workspace/pipeline01/ansible/roles/role_nginx_server/templates/index.html
+    src: /var/jenkins_home/workspace/pipeline01/ansible/roles/role_deployApplication/templates/index.html
     dest: /usr/share/nginx/html
     owner: root
     group: root
