@@ -26,7 +26,7 @@ pipeline {
 	      ansiblePlaybook (
 	        colorized: true,
 	        playbook: 'ansible/playbook.yml',
-	        inventory: 'ansible/hosts'
+	        inventory: 'ansible/hosts',
                 extras: '-vvv'
               )
 	    }
