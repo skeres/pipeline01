@@ -2,10 +2,10 @@
 # tasks to deploy applications
 
 - name : checkout repository
-   git:
-     repo: 'https://github.com/skeres/p1.git'
-     dest: /projectApp/checkout
-     version: develop
+  git:
+    repo: 'https://github.com/skeres/p1.git'
+    dest: /projectApp/checkout
+    version: develop
 
 - name: copy files with backup
   copy:
