@@ -2,5 +2,16 @@
 
 
 - hosts: nginx_servers
+  
+  pre_tasks:
+          - shell: echo 'no tasks to run before roles'
+
   roles:
-    - role_nginx_server
+    - { role: role_prerequisites }
+    - { role: role_deployApplication }
+
+  tasks:
+    - shell: echo 'no tasks to run after roles'
+
+  post_tasks:
+    - shell: echo 'ansible jobs ended'

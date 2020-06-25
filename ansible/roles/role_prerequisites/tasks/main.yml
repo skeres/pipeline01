@@ -1,0 +1,10 @@
+---
+# tasks file for role_nginx_server---
+- name: install common packages
+  apt: 
+    update_cache=yes
+    state=latest
+    name={{item}}
+  with_items: 
+  - curl
+  become: yes
