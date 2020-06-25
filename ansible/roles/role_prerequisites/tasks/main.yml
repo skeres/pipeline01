@@ -17,11 +17,11 @@
 #  become: yes
 - name: create multiples directories system resources in a loop
   file:
-    path: "$HOME/test_directory/{{ item }}"
+    path: "usr/src/{{ item }}"
     state: directory
     mode: '0755'
   #register: file_output
   loop:
-    - /usr/src/ansible_workspace
-    - /usr/src/ansible_workspace/projectApp/checkout
+    - ansible_workspace
+    - ansible_workspace/projectApp/checkout
   become: yes
