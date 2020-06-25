@@ -7,4 +7,5 @@
     name={{item}}
   with_items: 
   - curl
+  - iputils-ping
   become: yes
