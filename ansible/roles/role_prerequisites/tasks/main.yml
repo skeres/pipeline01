@@ -34,12 +34,9 @@
 - name: check for success
   stat:
     path: "/usr/src/ansible_workspace/projectApp/checkout"
-  register: result
+  register: my_directory
   become: yes
 
-
-- name: do something with file if exists
-  command: echo "directories /usr/src/ansible_workspace/projectApp/checkout exist"
-  when: result.stat.exists
- 
- 
+- debug:
+    msg: "/usr/src/ansible_workspace/projectApp/checkout is a directory"
+    when: my_directory.stat.exists and my_directory.stat.isdir
