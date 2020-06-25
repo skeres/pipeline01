@@ -39,4 +39,4 @@
 
 - debug:
     msg: "/usr/src/ansible_workspace/projectApp/checkout is a directory"
-    when: my_directory.stat.exists and my_directory.stat.isdir
+  when: my_directory.stat.exists and my_directory.stat.isdir
