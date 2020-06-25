@@ -6,6 +6,7 @@
     repo: 'https://github.com/skeres/p1.git'
     dest: /usr/src/ansible_workspace/projectApp/checkout
     version: develop
+  become: yes
 
 - name: copy files with backup
   copy:
