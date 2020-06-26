@@ -1,6 +1,9 @@
 ---
 # tasks to deploy applications
 
+- name: delete existing app files on target server
+  shell: rm -rf /usr/share/nginx/html/*
+
 - name: checkout repository
   git:
     repo: 'https://github.com/skeres/p1.git'
