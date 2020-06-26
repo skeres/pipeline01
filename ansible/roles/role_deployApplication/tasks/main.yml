@@ -18,5 +18,6 @@
     group: root
     mode: '0644'
     backup: yes
+    remote_src: yes
   become: yes
 
