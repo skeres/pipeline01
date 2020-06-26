@@ -11,8 +11,8 @@
 - name: copy files with backup
   copy:
     #src: /var/jenkins_home/workspace/projectApp/checkout/index.html
-    src: /usr/src/ansible_workspace/projectApp/checkout
-    dest: /usr/share/nginx/html
+    src: /usr/src/ansible_workspace/projectApp/checkout/
+    dest: /usr/share/nginx/html/
     owner: root
     group: root
     mode: '0644'
