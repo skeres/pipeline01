@@ -3,6 +3,7 @@
 
 - name: delete existing app files on target server
   shell: rm -rf /usr/share/nginx/html/*
+  become: yes
 
 - name: checkout repository
   git:
