@@ -14,7 +14,7 @@
 172.28.1.2
 
 [nginx_servers:vars]
-_system_memory: 4096
+_system_memory=2048
 
 #[nodejs_servers]
 #172.28.1.3
