@@ -14,10 +14,6 @@
     force: yes
   become: yes
 
-- name: set server variables for root user
-  shell: export system_memory={{_system_memory}}
-  become: yes
-
 - name: Touch a file (equivalent to 0644)
   file:
     path: /root/conf
