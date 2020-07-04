@@ -17,3 +17,14 @@
 - name: set server variables for root user
   shell: export system_memory={{_system_memory}}
   become: yes
+
+- name: Touch a file (equivalent to 0644)
+  file:
+    path: /root/conf
+    state: touch
+    mode: u=rw,g=r,o=r
+  become: yes
+
+- name: update file
+  shell: echo {{_system_memory}} >> /root/conf
+  become: yes
