@@ -11,7 +11,7 @@
 # Ex 1: Ungrouped hosts, specify before any group headers.
 
 [nginx_servers]
-172.28.1.2
+172.28.1.2  _system_memory: 4096
 
 #[nodejs_servers]
 #172.28.1.3
